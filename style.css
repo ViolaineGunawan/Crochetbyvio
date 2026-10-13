@@ -1,0 +1,80 @@
+/* beige FDEFE4 */
+/* red 8E3333   */
+
+body {
+    /* display: flex;
+    justify-content: center; */
+    font-family: Verdana;
+    background-image: url("bg.jpg");
+}
+
+.button{
+    background-color: #702525;
+    color: #FDEFE4;
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button2{
+    background-color: #702525;
+    color: #FDEFE4;
+    border: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.tabel{
+    background-color: #FDEFE4;
+    width: 1200px;
+    text-align: center;
+}
+
+td{
+    padding:10px;
+}
+
+th{
+    font-size: 40px;
+    padding:15px;
+}
+
+.kanankiri{
+    width: 200px;
+    vertical-align: top;
+    text-align: left;
+    padding:10px;
+}
+
+.tengah{
+    width: 1000px;
+    vertical-align: top;
+}
+
+.judul{
+    background-color: #E8C5B8;
+    color: #702525;
+}
+.menu{
+    background-color:#F5D9D0;
+    padding: 20px;
+}
+.isi{
+    background-color: #FDEFE4;
+}
+.footer{
+    background-color: #E4C1B8;
+}
+/* th{
+    padding: 0px;
+    margin: 0px;
+} */
+
