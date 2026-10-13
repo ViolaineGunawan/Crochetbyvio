@@ -1,4 +1,4 @@
-<h3 style="margin-left: 10px;">Estimasi pesanan selesai</h3>
+<h3 style="margin-left: 10px;text-align:left">Estimasi pesanan selesai</h3>
 <table>
     <form method="POST" action="">
         <tr>
@@ -33,10 +33,9 @@
     }
     ?>
 
-
 </table>
 <hr>
-<h3 style="margin-left: 10px;">Nilai</h3>
+<h3 style="margin-left: 10px;text-align:left;">Nilai</h3>
 <table>
     <form method="POST" action="">
         <tr>
