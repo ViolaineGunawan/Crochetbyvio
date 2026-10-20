@@ -19,6 +19,7 @@
                 <a href="index.php">Beranda</a>
                 <a href="index.php?pesan">Pesan</a>
                 <a href="index.php?estimasi">Estimasi</a>
+                <a href="index.php?daftar">Daftar</a>
             </td>
         </tr>
         <tr class="isi">
@@ -31,7 +32,10 @@
                     include "pesan.php";
                 } else if (isset($_GET['estimasi'])) {
                     include "estimasi.php";
-                } else {
+                } else if (isset($_GET['daftar'])) {
+                    include "signin.php";
+                }
+                else {
                     include "beranda.php";
                 } ?>
             </td>
