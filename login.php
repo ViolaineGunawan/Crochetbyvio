@@ -5,14 +5,24 @@ session_start();
 if (isset($_POST['login'])) {
 	$usr  = trim($_POST['user']);
 	$pas  = trim($_POST['pass']);
-	if ($usr == '' or $pas == '') {
+	if ($usr == '' or $pas == '') {		
 		echo "Data Tidak Boleh Kosong<br><br>";
 	} else if ($usr == 'admin' and $pas == 'admin') {
 		$_SESSION['user'] = "Admin";
-	} else {
-		echo "Username dan Password Salah<br><br>";
+	} 
+	else {
+		$loginn = mysqli_fetch_assoc(mysqli_query($link,"SELECT username, password FROM user WHERE username='$usr'"));
+		$cek = mysqli_fetch_row(mysqli_query($link,"SELECT count(*) FROM user WHERE username='$usr' and status=1"));
+		if ($cek[0]==0){?>
+		<?php echo"<p style='color:red;'>Username atau Password salah atau Belum Diverifikasi Admin</p>";?> 
+		<?php }
+		else{
+		if($usr==$loginn['username']&& $pas==$loginn['password']){$_SESSION['user']="$usr";}
+		else{
+			echo "<p style='color:red;'>Username atau Password salah</p>";
+		}
 	}
-}
+}}
 
 if (isset($_GET['logout'])) {
 	unset($_SESSION['user']);
@@ -28,4 +38,4 @@ if (isset($_GET['logout'])) {
 	<input type='submit' name='login' value='Login' id='submit' class='button'>
 	</form>
 	";
-}
+} ?>
